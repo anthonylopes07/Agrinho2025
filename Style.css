@@ -1,0 +1,250 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis para temas */
+:root {
+    --cor-primaria: #4CAF50;
+    --cor-texto: #333;
+    --cor-fundo: #fff;
+    --cor-header: #f8f9fa;
+    --sombra: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --cor-texto: #f1f1f1;
+    --cor-fundo: #121212;
+    --cor-header: #1e1e1e;
+    --sombra: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Acessibilidade */
+.accessibility-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.access-btn {
+    padding: 5px 10px;
+    background: var(--cor-primaria);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Cabeçalho */
+header {
+    background: var(--cor-header);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+}
+
+/* Menu Hambúrguer */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 25px;
+    height: 3px;
+    background: var(--cor-texto);
+}
+
+/* Menu Mobile */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: var(--cor-header);
+    transition: left 0.3s;
+    z-index: 200;
+    padding: 2rem;
+}
+
+#nav-mobile:target {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+}
+
+.mobile-nav ul {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.mobile-nav li {
+    margin-bottom: 1rem;
+}
+
+.mobile-nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Login Simulado */
+.fake-login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--cor-texto);
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Seção Produtores */
+.produtores-section {
+    padding: 2rem;
+}
+
+.produtores-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}
+
+.produtores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.produtor-card {
+    background: var(--cor-header);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.produtor-card summary {
+    list-style: none;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.produtor-card summary img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.produtos-lista {
+    padding: 1rem;
+    display: grid;
+    gap: 15px;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.05);
+}
+
+.produto img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+    background: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .produtores-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel {
+        height: 200px;
+    }
+}
