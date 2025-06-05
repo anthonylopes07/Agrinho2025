@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Produtor Rural</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Barra de Acessibilidade -->
+    <div class="accessibility-bar">
+        <a href="#light-mode" class="access-btn"><i class="fas fa-sun"></i> Claro</a>
+        <a href="#dark-mode" class="access-btn"><i class="fas fa-moon"></i> Escuro</a>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Produtos Locais</h1>
+        </div>
+        
+        <!-- Menu Hambúrguer -->
+        <a href="#nav-mobile" class="menu-btn">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </a>
+        
+        <!-- Login Simulado -->
+        <div class="fake-login">
+            <i class="fas fa-user"></i>
+            <span>Entrar</span>
+        </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav id="nav-mobile" class="mobile-nav">
+        <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#produtores">Produtores</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrossel de Imagens (CSS puro) -->
+    <div class="carousel">
+        <div class="slide active">
+            <img src="assets/imagens/banner1.jpg" alt="Produtos Orgânicos">
+        </div>
+        <div class="slide">
+            <img src="assets/imagens/banner2.jpg" alt="Agricultura Familiar">
+        </div>
+    </div>
+
+    <!-- Seção Produtores -->
+    <section id="produtores" class="produtores-section">
+        <h2>Conheça Nossos Produtores</h2>
+        
+        <div class="produtores-grid">
+            <!-- Produtor 1 -->
+            <details class="produtor-card">
+                <summary>
+                    <img src="assets/imagens/produtor1.jpg" alt="João Agricultor">
+                    <h3>João Silva</h3>
+                    <p>Frutas Orgânicas</p>
+                </summary>
+                <div class="produtos-lista">
+                    <a href="https://wa.me/5511999999999?text=Olá%20João,%20gostaria%20de%20comprar%20seu%20produto:" class="produto">
+                        <img src="assets/imagens/maca.jpg" alt="Maçãs">
+                        <p>Maçãs Orgânicas - R$ 8,00/kg</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Olá%20João,%20gostaria%20de%20comprar%20seu%20produto:" class="produto">
+                        <img src="assets/imagens/banana.jpg" alt="Bananas">
+                        <p>Bananas Prata - R$ 5,00/kg</p>
+                    </a>
+                </div>
+            </details>
+
+            <!-- Produtor 2 -->
+            <details class="produtor-card">
+                <summary>
+                    <img src="assets/imagens/produtor2.jpg" alt="Maria Agricultora">
+                    <h3>Maria Oliveira</h3>
+                    <p>Laticínios</p>
+                </summary>
+                <div class="produtos-lista">
+                    <a href="https://wa.me/5511888888888?text=Olá%20Maria,%20gostaria%20de%20comprar%20seu%20produto:" class="produto">
+                        <img src="assets/imagens/queijo.jpg" alt="Queijo">
+                        <p>Queijo Minas - R$ 25,00/kg</p>
+                    </a>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-info">
+            <p>Projeto de conexão direta com produtores rurais</p>
+            <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+        </div>
+    </footer>
+</body>
+</html>
